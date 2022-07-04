@@ -4,9 +4,7 @@
 
 # Overview
 
-![figure 1](/Figure/fig1.png)
-
-![figure 2](/Figure/fig2.png)
+![figure 1](/fig1.png)
 
 # Requirements 
 * Python 3.7
