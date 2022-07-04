@@ -17,9 +17,9 @@
 # Usage
 ### Installation
 
-'''c
+```python
 git clone https://github.com/SNU-LIST/CoiltoCoil.git
-'''
+```
 
 ### Inference
 
