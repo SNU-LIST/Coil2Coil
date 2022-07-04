@@ -15,17 +15,17 @@
 
 
 # Usage
-### Simulation 
+### Installation
 
-* Monte-Carlo diffusion simulation code to generate diffusion-weighted signals for training.
+'''
+git clone https://github.com/SNU-LIST/CoiltoCoil.git
+'''
 
-### Training
+### Inference
 
-* The source code for training DIFFnet. Simulated data from Monte-Carlo diffusion simulation has to be required.
 
-### Evaluation
 
-* The source code for evaluation of the trained networks.
-* In-vivo data and simulated data can be evaluated both.
-* Networks generate diffusion model parameters.
+### Traininig
+
+
 
