@@ -1,5 +1,6 @@
 # CoiltoCoil
-* The code is for denoising of MR images using deep learning (C2C)
+* The code is for denoising of MR images using deep learning (C2C), C2C 
+generated paired noise-corrupted images from phased-array coil data to train a deep neural network, based on a N2N algorithm (Lehtinen, et al)
 * last update : 2022. 07. 04
 
 # Overview
@@ -57,3 +58,8 @@ python train.py -dir {directory to save logs}
                 -v {path for validation dataset} 
                 -noise {amount of noise (inf or gauss(float))}
 ```
+# LIcense
+# Contact 
+Juhyug Park, M.S-Ph.D candidate, Seoul National University
+jack0878@snu.ac.kr
+http://list.snu.ac.kr
