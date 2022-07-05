@@ -15,7 +15,7 @@
 
 
 # Usage
-### *Installation
+### Installation
 
 First, download the codes. 
 
