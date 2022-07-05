@@ -34,6 +34,7 @@ There might be 'ssmd' library (pip list)
 ### <Inference>
 
 Run the eval.py with following codes
+
 Arguments are provided below:
 ```python
 python eval.py -dir {directory to save logs} 
@@ -44,6 +45,7 @@ python eval.py -dir {directory to save logs}
 ### <Traininig>
 
 Run the train.py with following codes
+
 Arguments are provided below:
 ```python
 python train.py -dir {directory to save logs} 
