@@ -17,9 +17,19 @@
 # Usage
 ### Installation
 
+First, download the codes. 
+
 ```python
 git clone https://github.com/SNU-LIST/CoiltoCoil.git
 ```
+
+Then, go inside 'CoiltoCoil' file, and install the ssmd packages
+
+Following command will be install a few libraries such as Pytorch, Numpy, and etc...
+```python
+pip install -e ssmd
+```
+There might be 'ssmd' library (pip list)
 
 ### Inference
 
