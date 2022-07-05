@@ -59,7 +59,19 @@ python train.py -dir {directory to save logs}
                 -noise {amount of noise (inf or gauss(float))}
 ```
 # LIcense
+We provide software for academic research purpose only and NOT for commercial or clinical use.
+For commercial use of our software, contact us (snu.list.software@gmail.com) for licensing via Seoul National University.
+Please email to “snu.list.software@gmail.com” with the following information.
+
+Name:
+Affiliation:
+Software:
+
+When sending an email, an academic e-mail address (e.g. .edu, .ac.) is required.
+
 # Contact 
 Juhyug Park, M.S-Ph.D candidate, Seoul National University
+
 jack0878@snu.ac.kr
+
 http://list.snu.ac.kr
