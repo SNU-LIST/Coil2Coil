@@ -33,8 +33,14 @@ There might be 'ssmd' library (pip list)
 
 ### Inference
 
-
-
+Run the eval.py with following codes
+Arguments are provided below:
+```python
+python eval.py -dir {directory to save logs} 
+               -m {model weight path} 
+               -d {dataset path for inference} 
+               -noise {amount of noise (inf for just inference)}
+```
 ### Traininig
 
 
