@@ -31,7 +31,7 @@ pip install -e ssmd
 ```
 There might be 'ssmd' library (pip list)
 
-### Inference
+### <Inference>
 
 Run the eval.py with following codes
 Arguments are provided below:
@@ -41,7 +41,13 @@ python eval.py -dir {directory to save logs}
                -d {dataset path for inference} 
                -noise {amount of noise (inf for just inference)}
 ```
-### Traininig
+### <Traininig>
 
-
-
+Run the train.py with following codes
+Arguments are provided below:
+python train.py -dir {directory to save logs} 
+                -a {algorithm, 'c2c' or 'n2c'} 
+                -t {path for training dataset} 
+                -v {path for validation dataset} 
+                -noise {amount of noise (inf or gauss(float))}
+```
