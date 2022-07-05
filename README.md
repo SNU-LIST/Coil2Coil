@@ -45,6 +45,7 @@ python eval.py -dir {directory to save logs}
 
 Run the train.py with following codes
 Arguments are provided below:
+```python
 python train.py -dir {directory to save logs} 
                 -a {algorithm, 'c2c' or 'n2c'} 
                 -t {path for training dataset} 
