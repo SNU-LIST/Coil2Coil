@@ -18,19 +18,19 @@ generated paired noise-corrupted images from phased-array coil data to train a d
 # Usage
 ### Installation
 
-First, download the codes. 
+First, download the codes using the command below. 
 
 ```python
-git clone https://github.com/SNU-LIST/CoiltoCoil.git
+git clone https://github.com/SNU-LIST/Coil2Coil.git
 ```
 
-Then, go inside 'CoiltoCoil' file, and install the ssmd packages
+Then, go inside 'Coil2Coil' file, and install the ssmd packages
 
-Following command will be install a few libraries such as Pytorch, Numpy, and etc...
+Following command will be install a few dependent libraries such as Pytorch, Numpy, and etc...
 ```python
 pip install -e ssmd
 ```
-There might be 'ssmd' library (pip list)
+There might be 'ssmd' library on your environment (pip list)
 
 
 ### Inference
