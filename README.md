@@ -5,7 +5,7 @@ generated paired noise-corrupted images from phased-array coil data to train a d
 
 # Overview
 
-![figure 1](/fig1.png)
+![figure 1](/figure.png)
 
 # Requirements 
 * Python 3.7
