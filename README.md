@@ -1,6 +1,6 @@
 # Coil2Coil
 * The code is for denoising of MR images using deep learning referred to as Coil2Coil (C2C). C2C 
-generated paired noise-corrupted images from phased-array coil data to train a deep neural network. Then the paried images were modified to satisfy the conditions of Noise2Noise (Lehtinen, et al), enabling network training using N2N algorithm. 
+generated paired noise-corrupted images from phased-array coil data to train a deep neural network, and the paried images were modified to satisfy the conditions of Noise2Noise (N2N; Lehtinen, et al), enabling network training using N2N algorithm. 
 * last update : 2022. 08. 07
 
 # Overview
