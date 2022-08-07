@@ -3,6 +3,9 @@
 generated paired noise-corrupted images from phased-array coil data to train a deep neural network, and the paried images were modified to satisfy the conditions of Noise2Noise (N2N; Lehtinen, et al), enabling network training using N2N algorithm. 
 * last update : 2022. 08. 07
 
+# Reference
+* will be updated
+
 # Overview
 
 ![figure 1](/figure.png)
