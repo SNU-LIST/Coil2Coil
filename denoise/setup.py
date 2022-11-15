@@ -16,8 +16,8 @@ setup(
     packages=find_packages(),
     entry_points={"console_scripts": ["module = module.__main__:start_cli"]},
     install_requires=[
-        "torch",
-        "torchvision",
+        "torch==1.12",
+        "torchvision==0.13",
         "tensorboard",
         "nptyping",
         "h5py",
