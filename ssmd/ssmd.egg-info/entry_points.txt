@@ -1,3 +1,0 @@
-[console_scripts]
-ssmd = ssmd.__main__:start_cli
-
