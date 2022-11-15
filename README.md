@@ -31,9 +31,9 @@ Then, go inside 'Coil2Coil' file, and install the ssmd packages
 
 Following command will be install a few dependent libraries such as Pytorch, Numpy, and etc...
 ```python
-pip install -e ssmd
+pip install -e denoise
 ```
-There might be 'ssmd' library on your environment (pip list)
+There might be 'denoise' library on your environment (pip list)
 
 
 ### Inference
@@ -47,6 +47,16 @@ python eval.py -dir {directory to save logs}
                -d {dataset path for inference} 
                -noise {amount of noise (inf for just inference)}
 ```
+
+Or if you just wanna inference one .mat file ...
+
+```python
+python test_chan1.py -dir {directory to save logs} 
+               -m {model weight path} 
+               -d {dataset path for inference} 
+               -noise {amount of noise (inf for just inference)}
+```
+
 
 
 ### Traininig
