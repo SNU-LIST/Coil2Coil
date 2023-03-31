@@ -27,7 +27,7 @@ from torch.utils.data import Dataset
 from torchvision import transforms as transforms
 
 from utils.noise import noise_adder
-
+from utils.cov_calculator import calculate
 
 class DataWrapper(Dataset):
     Input = 0
@@ -157,9 +157,10 @@ class DataWrapper(Dataset):
                 _lasen = self.conj_sum(lasen, lasen, broadcast = True)
 
                 #alpha, beta = 0, 1
-                    
-                #iid_label = alpha * inp + beta * label
-                #iid_lasen = alpha * insen + beta * lasen
+                alpha, beta = calculate(_noisy, _sen, in_arr, out_arr)
+            
+                _label = alpha * _inp + beta * _label
+                _lasen = alpha * _insen + beta * _lasen
                 
                 ### magnitude ###
                 #_inp = torch.sqrt(_inp[:1,:,:]**2 + _inp[1:,:,:]**2)
