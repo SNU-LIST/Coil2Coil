@@ -1,5 +1,5 @@
 import torch
-"""
+
 def calculate(noisy, sen, in_arr, out_arr):
     noisy_bg = torch.cat((noisy[:,:,:20,:20],
                         noisy[:,:,-20:,:20],
@@ -13,12 +13,12 @@ def calculate(noisy, sen, in_arr, out_arr):
     out_var = torch.var(noisy_out)
     cov =  torch.mean((noisy_in - noisy_in.mean())*(noisy_out - noisy_out.mean()))
     #print(cov)
-    alpha = - cov / torch.sqrt(in_var * out_var - cov ** 2 + 1e-12)
+    alpha = - cov / (in_var * out_var - cov ** 2 + 1e-12)
     
     if alpha == 0 :
         beta = 1
     else:
-        beta = in_var / torch.sqrt(in_var * out_var - cov ** 2 + 1e-12)
+        beta = in_var / (in_var * out_var - cov ** 2 + 1e-12)
     #print(torch.abs(alpha).max())
     return alpha, beta
 
@@ -26,7 +26,7 @@ def calculate(noisy, sen, in_arr, out_arr):
 
 
 
-"""
+'''
 
 
 def calculate(noisy, sen, in_arr, out_arr):
@@ -64,3 +64,4 @@ def calculate(noisy, sen, in_arr, out_arr):
     cor =  torch.mean((a - a.mean())*(b - b.mean()))
     print(cor / torch.sqrt(torch.var(a) * torch.var(b) - torch.mean((a - a.mean())*(b - b.mean())) ** 2) )
     return alpha, beta
+'''
