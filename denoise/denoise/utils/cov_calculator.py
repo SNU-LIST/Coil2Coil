@@ -1,5 +1,5 @@
 import torch
-
+'''
 def calculate(noisy, sen, in_arr, out_arr):
     noisy_bg = torch.cat((noisy[:,:,:20,:20],
                         noisy[:,:,-20:,:20],
@@ -13,30 +13,23 @@ def calculate(noisy, sen, in_arr, out_arr):
     out_var = torch.var(noisy_out)
     cov =  torch.mean((noisy_in - noisy_in.mean())*(noisy_out - noisy_out.mean()))
     #print(cov)
-    alpha = - cov / (in_var * out_var - cov ** 2 + 1e-12)
+    alpha = - cov / torch.sqrt(in_var * out_var - cov ** 2 + 1e-12)
     
     if alpha == 0 :
         beta = 1
     else:
-        beta = in_var / (in_var * out_var - cov ** 2 + 1e-12)
+        beta = in_var / torch.sqrt(in_var * out_var - cov ** 2 + 1e-12)
     #print(torch.abs(alpha).max())
     return alpha, beta
 
-
-
-
-
 '''
-
-
 def calculate(noisy, sen, in_arr, out_arr):
     noisy_bg = torch.cat((noisy[:,:,:20,:20],
                         noisy[:,:,-20:,:20],
                         noisy[:,:,:20,-20:],
                         noisy[:,:,-20:,-20:]),3)
     
-    noisy_mean = noisy_bg.mean([1,2,3])
-    
+    noisy_mean = noisy_bg.mean([1,2,3])  
     cov_map = torch.zeros_like(sen[0:3,...])
     
     for i in in_arr:
@@ -51,7 +44,6 @@ def calculate(noisy, sen, in_arr, out_arr):
             cov_map[2,...] = cov_map[2,...] + cov22 * torch.abs(sen_i) * torch.abs(sen_j)
     
     alpha = - cov_map[1,...] / torch.sqrt(cov_map[0,...] * cov_map[2,...] - cov_map[1,...] ** 2 + 1e-12)
-
     if alpha.max() == 0:
         beta = torch.ones_like(alpha)
 
@@ -64,4 +56,3 @@ def calculate(noisy, sen, in_arr, out_arr):
     cor =  torch.mean((a - a.mean())*(b - b.mean()))
     print(cor / torch.sqrt(torch.var(a) * torch.var(b) - torch.mean((a - a.mean())*(b - b.mean())) ** 2) )
     return alpha, beta
-'''
